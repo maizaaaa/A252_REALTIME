@@ -20,6 +20,7 @@ The purpose of this project is to understand concepts such as threads, synchroni
 The project is organized by week/module:
 
 Week_04 – Influencing Thread Execution
+
      ├── Lab Task
      ├── YieldThread
      ├── Join
