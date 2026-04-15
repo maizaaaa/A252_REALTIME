@@ -3,6 +3,7 @@
 ## 👤 Student Information
 
 **Name:** Nutul Maizatul Hasanah binti Noor Azlan
+
 **Matric No:**  302755
 
 ---
@@ -18,11 +19,11 @@ The purpose of this project is to understand concepts such as threads, synchroni
 
 The project is organized by week/module:
 
-* Week_04 – Influencing Thread Execution
-          ⤷ Lab Task
-          ⤷ YieldThread
-          ⤷ Join
-          ⤷ Interrupt
+Week_04 – Influencing Thread Execution
+     ├── Lab Task
+     ├── YieldThread
+     ├── Join
+     └── Interrupt
 
 Each folder contains Java source code for the respective topic.
 
