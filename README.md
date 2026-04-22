@@ -17,12 +17,20 @@ The purpose of this project is to understand concepts such as threads, synchroni
 
 The project is organized by week/module:
 
-Week_04 – Influencing Thread Execution
+1. Week_04 – Influencing Thread Execution
 
-     ├── Lab Task
-     ├── YieldThread
-     ├── Join
-     └── Interrupt
+          ├── Week_04
+             ├── Interrupt
+             ├── Join
+             ├── Lab Task
+             └── YieldThread
+
+3. Week_06 - Thread Safety
+   
+        ├── Week_06
+          ├── Synchonization
+          ├── WithAtomic
+          └── WithoutAtomic
 
 Each folder contains Java source code for the respective topic.
 
