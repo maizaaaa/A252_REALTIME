@@ -28,6 +28,7 @@ The project is organized by week/module:
 3. Week_06 - Thread Safety
    
         ├── Week_06
+          ├── Deadlock (exercise)
           ├── Synchonization
           ├── WithAtomic
           └── WithoutAtomic
