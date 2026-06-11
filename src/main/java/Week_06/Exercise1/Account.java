@@ -1,4 +1,4 @@
-package Week_06.Deadlock;
+package Week_06.Exercise1;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

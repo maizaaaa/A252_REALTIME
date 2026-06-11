@@ -1,4 +1,4 @@
-package Week_06.Deadlock;
+package Week_06.Exercise1;
 
 public class Deadlock {
     public static void transfer (Account from, Account to, int amount){
