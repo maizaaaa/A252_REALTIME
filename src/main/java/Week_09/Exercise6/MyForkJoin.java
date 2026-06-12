@@ -26,7 +26,7 @@ class SumTask extends RecursiveTask<Long> {
             return sum;
         }
 
-        // split the array, fork one
+        // split the array, fork one.
         // compute the other directly, then join.
         else {
             int mid = start + (length / 2);
