@@ -7,7 +7,6 @@ class GradeCountTask extends RecursiveTask<int[]> {
     private int[] scores;
     private int start;
     private int end;
-    // Threshold set to 5 for demonstration on a small array
     private static final int THRESHOLD = 5;
 
     public GradeCountTask(int[] scores, int start, int end) {
@@ -20,43 +19,40 @@ class GradeCountTask extends RecursiveTask<int[]> {
     protected int[] compute() {
         int length = end - start;
 
-        // Array to hold counts for [A, B, C, D, F]
         int[] gradeCounts = new int[5];
 
-        // Base Case: Segment size <= threshold, compute directly [cite: 28]
         if (length <= THRESHOLD) {
             for (int i = start; i < end; i++) {
                 int score = scores[i];
                 if (score >= 85) {
-                    gradeCounts[0]++; // A [cite: 18]
+                    gradeCounts[0]++;
                 } else if (score >= 70) {
-                    gradeCounts[1]++; // B [cite: 19]
+                    gradeCounts[1]++;
                 } else if (score >= 55) {
-                    gradeCounts[2]++; // C [cite: 20]
+                    gradeCounts[2]++;
                 } else if (score >= 40) {
-                    gradeCounts[3]++; // D [cite: 21]
+                    gradeCounts[3]++;
                 } else {
-                    gradeCounts[4]++; // F [cite: 22]
+                    gradeCounts[4]++;
                 }
             }
             return gradeCounts;
         }
-        // Recursive Case: Segment size > threshold, split into two subtasks [cite: 29, 30]
         else {
             int mid = start + (length / 2);
             GradeCountTask leftTask = new GradeCountTask(scores, start, mid);
             GradeCountTask rightTask = new GradeCountTask(scores, mid, end);
 
-            // Execute left task asynchronously [cite: 31]
+            // Execute left task asynchronously
             leftTask.fork();
 
-            // Execute right task in current thread [cite: 32]
+            // Execute right task in current thread
             int[] rightResult = rightTask.compute();
 
-            // Wait for left task and get its result [cite: 33]
+            // Wait for left task and get its result
             int[] leftResult = leftTask.join();
 
-            // Combine results by summing corresponding grade counts [cite: 34]
+            // Combine results by summing corresponding grade counts
             int[] combinedCounts = new int[5];
             for (int i = 0; i < 5; i++) {
                 combinedCounts[i] = leftResult[i] + rightResult[i];
@@ -74,7 +70,6 @@ public class Task2 {
         ForkJoinPool pool = new ForkJoinPool();
         int[] finalCounts = pool.invoke(new GradeCountTask(scores, 0, scores.length));
 
-        // Print sample output [cite: 37]
         System.out.println("Final Exam Grade Counts:");
         System.out.println("Grade A (85-100): " + finalCounts[0]);
         System.out.println("Grade B (70-84): " + finalCounts[1]);
