@@ -17,7 +17,13 @@ The purpose of this project is to understand concepts such as threads, synchroni
 
 The project is organized by week/module:
 
-1. Week_04 – Influencing Thread Execution
+1. Individual_Assignment
+
+          ├── Individual_Assignment
+             ├── CourseRegistrationSystem
+             └── data
+   
+2. Week_04 – Influencing Thread Execution
 
           ├── Week_04
              ├── Interrupt
@@ -25,7 +31,7 @@ The project is organized by week/module:
              ├── Lab Task
              └── YieldThread
 
-2. Week_06 - Thread Safety
+3. Week_06 - Thread Safety
    
         ├── Week_06
           ├── Exercise 1
@@ -33,7 +39,7 @@ The project is organized by week/module:
           ├── WithAtomic
           └── WithoutAtomic
 
-3. Week_07 - Locking Framework
+4. Week_07 - Locking Framework
    
         ├── Week_07
           ├── Exercise 2
@@ -42,20 +48,20 @@ The project is organized by week/module:
           ├── AfterReentrantReadWriteLock
           └── BeforeReentrantLock
 
-4. Week_08 
+5. Week_08 
    
         ├── Week_08
           ├── BankAccountMain
           └── BankAccountWithLock
 
-5. Week_09 - Concurrent Collection
+6. Week_09 - Concurrent Collection
    
         ├── Week_09
           ├── Exercise 5
           ├── Exercise 6
           └── MinMaxMain
 
-6. Week_11 - Fork and Join Framework
+7. Week_11 - Fork and Join Framework
    
         ├── Week_11
           ├── Exercise 11
@@ -63,6 +69,13 @@ The project is organized by week/module:
           ├── CountEvenNumbersMap
           ├── CountEvenNumbersNormal
           └── CountEvenNumbersQueue
+
+8. Week_13 - Additional Thread Capabilities
+   
+        ├── Week_13
+          ├── CallableQuiz
+          ├── ThreadGroupApplication
+          └── ThreadGroupTimerApplication
    
 Each folder contains Java source code for the respective topic.
 
